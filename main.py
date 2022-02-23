@@ -35,4 +35,11 @@ for k in auction:
         highest_bid = auction[k]
         highest_bidder = k
 
-print(f"The winner is {highest_bidder} with a bid of ${highest_bid}.")
+if highest_bid == 0:
+    highest_bidder = 'nobody'
+    msg = 'as there were no '
+    highest_bid = 'valid bids'
+else:
+    msg = 'with a bid of $'
+
+print(f"The winner is {highest_bidder} {msg}{highest_bid}.")
